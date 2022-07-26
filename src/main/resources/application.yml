@@ -1,0 +1,12 @@
+server:
+  port: 80
+zuul:
+  prefix: /
+  routes:
+    api-service:
+      path: /api/**
+      sensitiveHeaders: NotCookie
+      url: http://mysite.mydomain.com:9080/api
+    static-service:
+      path: /**
+      url: http://mysite.mydomain.com:3000
