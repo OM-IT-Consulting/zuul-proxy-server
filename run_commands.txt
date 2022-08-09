@@ -5,5 +5,5 @@ Build :- mvn clean install -Dmaven.test.skip=true
 
 Run :-
 
-java -Dspring.profiles.active=dev -jar target/service-0.0.1-SNAPSHOT.jar
-java -Dspring.profiles.active=sit -jar target/service-0.0.1-SNAPSHOT.jar
+java -jar target/service-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+java -jar target/service-0.0.1-SNAPSHOT.jar --spring.profiles.active=sit
