@@ -1,10 +1,28 @@
 server:
   port: 80
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace
+        apache:
+          http:
+            wire: debug
 zuul:
+  include-debug-header: true
+  debug.request: true
+  debugFilters.disabled: false
   prefix: /
   routes:
     api-service:
       path: /api/**
       sensitiveHeaders: NotCookie
+    main-page:
+      path: /index.html
+    remote-catalogue-static-service:
+      path: /remote-bmart-catalogue/**
     static-service:
       path: /**
+
+
