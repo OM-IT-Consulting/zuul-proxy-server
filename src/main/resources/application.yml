@@ -22,7 +22,10 @@ zuul:
       path: /index.html
     remote-catalogue-static-service:
       path: /remote-bmart-catalogue/**
-    static-service:
+    web-main-ui-static-service:
+      path: /static-assets/**
+    web-main-ui-service:
       path: /**
+
 
 
